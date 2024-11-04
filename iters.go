@@ -308,7 +308,7 @@ func CountFunc[V any](s iter.Seq[V], f func(V) bool) int {
 	return count
 }
 
-// Count values.
+// Count2 values.
 func Count2[K, V any](s iter.Seq2[K, V]) int {
 	var count int
 	for range s {
@@ -425,7 +425,7 @@ func jitter[T constraints.Float | constraints.Integer](v T, factor, random float
 func Jitter[T constraints.Float | constraints.Integer](vv iter.Seq[T], factor float64) iter.Seq[T] {
 	return func(yield func(T) bool) {
 		jitter := func(v T) T {
-			return jitter(v, factor, float64(rand.Uint64())*2/math.MaxUint64-1)
+			return jitter(v, factor, float64(rand.Uint64())*2/math.MaxUint64-1) //nolint:gosec
 		}
 		if factor == 0 {
 			jitter = func(v T) T { return v }

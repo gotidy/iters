@@ -1,6 +1,15 @@
+[![CI State](https://github.com/gotidy/iters/.github/workflows/go.yml/badge.svg)](https://github.com/gotidy/iters/actions)
+[![Go Doc](https://godoc.org/github.com/gotidy/iters?status.svg)](https://pkg.go.dev/github.com/gotidy/iters)
+
 # iters
 
 Go iterators.
+
+## Installation
+
+```go
+go get github.com/gotidy/iters
+```
 
 ## General Iterators
 
