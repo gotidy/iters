@@ -1,4 +1,4 @@
-[![CI State](https://github.com/gotidy/iters/actions/workflows/Go/badge.svg)](https://github.com/gotidy/iters/actions)
+[![CI State](https://github.com/gotidy/iters/actions/workflows/go.yml/badge.svg)](https://github.com/gotidy/iters/actions)
 [![Go Doc](https://godoc.org/github.com/gotidy/iters?status.svg)](https://pkg.go.dev/github.com/gotidy/iters)
 
 # iters
