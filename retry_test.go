@@ -14,6 +14,7 @@ func ExampleRetry() {
 	fmt.Println(time.Since(start) > time.Second)
 
 	// Output:
+	// 0 0s
 	// 1 100ms
 	// 2 100ms
 	// 3 100ms
@@ -36,6 +37,7 @@ func ExampleRetry_break() {
 	}
 
 	// Output:
+	// 0 0s
 	// 1 1ms
 	// 2 2ms
 	// 3 4ms
