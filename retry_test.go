@@ -29,7 +29,7 @@ func ExampleRetry() {
 }
 
 func ExampleRetry_break() {
-	for attempt, delay := range Retry(context.Background(), Trim(Exponential(time.Millisecond, time.Second, 2), 5)) {
+	for attempt, delay := range Retry(context.Background(), Exponential(time.Millisecond, time.Second, 2)) {
 		fmt.Println(attempt, delay)
 		if attempt == 5 {
 			break
@@ -50,6 +50,7 @@ func ExampleRetry_ctx() {
 	done := make(chan struct{})
 	go func() {
 		for range Retry(ctx, Repeat(time.Millisecond*100)) {
+			fmt.Print()
 		}
 		fmt.Println("stopped")
 		close(done)
